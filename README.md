@@ -9,6 +9,12 @@ English keyboard layout fix for CS2/CS:GO. Removes that annoying english keyboar
 1. Launch CS2/CS:GO.
 1. Open `cs2_kbl_fix.exe` after the new keyboard layout has appeared.
 
+## Download
+
+You can download the latest release from the [releases page][RELEASES_PAGE].
+
 ## Technical details
 
 Going from memory `inputsystem.dll` tries to map english virtual keys to other languages so it calls `user32!LoadKeyboardLayoutA` with `00000409` as locale identifier (U.S. English), but then forgets to unload it using `user32!UnloadKeyboardLayout` which is what the fix does.
+
+[RELEASES_PAGE]: https://github.com/kalhotky/cs2-kbl-fix/releases
